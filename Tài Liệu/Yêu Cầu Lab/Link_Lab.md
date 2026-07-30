@@ -8,3 +8,6 @@ Lab 3 https://docs.google.com/document/d/1vXQ89sWMS1FMwhP58ok_yBtd3IYfGdKn_LtghT
 
 <br>
 Lab 4 https://docs.google.com/document/d/1a7Us4L6FJojtg8QKgbq0QZOkB5CB856NlqIqpwbDBSM/edit?usp=sharing
+
+<br>
+Lab 5 https://docs.google.com/document/d/1gZP2TjvmWQKrbT71vFfpyXtZPCvWwq3CH7nZeQLT9Fw/edit?usp=sharing

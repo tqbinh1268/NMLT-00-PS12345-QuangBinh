@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+
 void YeuCau1();
 void YeuCau2();
 int main()
@@ -41,6 +42,8 @@ int main()
             //         goto ketThuc3;
             //     }
             // }
+            //16  4.0     ==      4
+            //17  4.12    ><      4
             if(sqrt(x) == (int)sqrt(x))
                 printf("Số %d là số chính phương\n", x);
             else
