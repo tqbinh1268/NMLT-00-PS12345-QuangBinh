@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 void menu();
 void chucNang1();
 void chucNang2();
 void chucNang3();
+void chucNang4();
 int soLonNhat(int a, int b, int c);
 bool kiemTraNamNhuan(int nam);
 void swap(int *a, int *b);
+char* checkTriangle(float a, float b, float c);
 int main(){
     int chon;
     do
@@ -24,6 +27,9 @@ int main(){
             break;
         case 3:
             chucNang3();
+            break;
+        case 4:
+            chucNang4();
             break;
         case 5:
             printf("Tam biet!");
@@ -100,3 +106,28 @@ void swap(int *a, int *b){
     *a = *b;
     *b = temp;
 } 
+
+void chucNang4(){
+    int a,b,c;
+    printf("Nhap 3 canh a,b,c: ");
+    scanf("%d%d%d",&a,&b,&c);
+    printf("%s\n",checkTriangle(a,b,c));
+}
+
+//tri tuyet doi |6 - 4| = 2  abs
+char* checkTriangle(float a, float b, float c){
+    if(a+b>c && a+c>b && b+c>a && a>0 && b>0 && c>0)
+        if(a==b && b==c)
+            return "Tam giac deu.";
+        else if (a*a + b*b == c*c || a*a + c*c == b*b || b*b + c*c == a*a)
+        {
+            if(a==b || a==c || b==c){
+                return "Tam giac vuong can";
+            }else{
+                return "Tam giac vuong";
+            }
+        }else 
+            return "Tam giac thuong";
+    else
+        return "Khong phai la bo 3 canh cua tam giac";
+}
