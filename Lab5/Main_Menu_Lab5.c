@@ -9,7 +9,7 @@ void chucNang4();
 int soLonNhat(int a, int b, int c);
 bool kiemTraNamNhuan(int nam);
 void swap(int *a, int *b);
-char* checkTriangle(float a, float b, float c);
+const char* checkTriangle(float a, float b, float c);
 int main(){
     int chon;
     do
@@ -115,7 +115,7 @@ void chucNang4(){
 }
 
 //tri tuyet doi |6 - 4| = 2  abs
-char* checkTriangle(float a, float b, float c){
+const char* checkTriangle(float a, float b, float c){
     if(a+b>c && a+c>b && b+c>a && a>0 && b>0 && c>0)
         if(a==b && b==c)
             return "Tam giac deu.";
