@@ -11,3 +11,13 @@ Lab 4 https://docs.google.com/document/d/1a7Us4L6FJojtg8QKgbq0QZOkB5CB856NlqIqpw
 
 <br>
 Lab 5 https://docs.google.com/document/d/1gZP2TjvmWQKrbT71vFfpyXtZPCvWwq3CH7nZeQLT9Fw/edit?usp=sharing
+
+<br>
+Lab 6 https://docs.google.com/document/d/1w7FJK70Ova-YuX6JPRVfAW9wjR8klTZkGOspCsUQlOA/edit?usp=sharing
+
+<br>
+Lab 7
+
+
+<br>
+Lab 8
