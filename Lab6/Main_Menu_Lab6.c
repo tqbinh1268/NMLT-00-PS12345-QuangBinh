@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
+#include<float.h>
 void menu();
 void chucNang1();
 void chucNang2();
 void chucNang3();
 void chucNang4();
 void chucNang5();
+
+float tinhTrungBinhCong(int a[], int n);
 void swap(int *a, int *b);
 int main(){
     int chon;
@@ -59,32 +62,30 @@ void menu(){
 }
 
 void chucNang1(){
-    int a,b,c;
-    printf("Nhap a,b,c: ");
-    scanf("%d%d%d",&a,&b,&c);
-    printf("So lon nhat: %d\n",soLonNhat(a,b,c));
+    int n;
+    int a[10];
+    printf("Nhap n: ");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        printf("Nhap A[%d]= ",i);
+        scanf("%d",&a[i]);
+    }
+    float tbc = tinhTrungBinhCong(a,n);
+    if(tbc == -FLT_MAX){
+        printf("Khong co so chia het cho 3 va 5\n");
+    }else{
+        printf("Trung binh cong cua mang: %.2f\n",tbc);
+    }
 }
 
 //2. Kiểm tra Năm nhuận  
 void chucNang2(){
-    int nam;
-    printf("Nhap nam: ");
-    scanf("%d",&nam);
-    if(kiemTraNamNhuan(nam)){
-        printf("Nam %d la nam nhuan\n",nam);
-    }else{
-        printf("Nam %d khong phai la nam nhuan\n",nam);
-    }
+    
 }
 
 //hoan vi
 void chucNang3(){
-    int x,y;
-    printf("Nhap hai so x, y: ");
-    scanf("%d%d",&x,&y);
-    printf("Truoc khi hoan vi x = %d. y = %d\n",x,y);
-    swap(&x,&y); //chú ý
-    printf("Sau khi hoan vi x = %d. y = %d\n",x,y);
+    
 }
 
 void swap(int *a, int *b){
@@ -94,12 +95,27 @@ void swap(int *a, int *b){
 } 
 
 void chucNang4(){
-    int a,b,c;
-    printf("Nhap 3 canh a,b,c: ");
-    scanf("%d%d%d",&a,&b,&c);
-    printf("%s\n",checkTriangle(a,b,c));
+    
 }
 
 void chucNang5(){
-    
+
+}
+
+//////
+float tinhTrungBinhCong(int a[], int n){
+    int tong = 0;
+    int soDem = 0;
+    for(int i=0;i<n;i++){
+        if(a[i]%3==0 && a[i]%5==0){
+            tong+=a[i];
+            soDem++;
+        }
+    }
+    if(soDem==0){
+        return -FLT_MAX; //số nhỏ nhất trong float
+    }else{
+        return (float)tong/soDem;
+    }
+        
 }
