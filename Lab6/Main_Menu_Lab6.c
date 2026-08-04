@@ -12,6 +12,7 @@ void chucNang5();
 float tinhTrungBinhCong(int a[], int n);
 void timMaxMin(int a[], int n);
 void sapXepGiamDan(int a[], int n);
+void maTranBinhPhuong(int row, int col);
 void swap(int *a, int *b);
 int main(){
     int chon;
@@ -113,7 +114,7 @@ void swap(int *a, int *b){
 } 
 
 void chucNang4(){
-    
+    maTranBinhPhuong(3,3);
 }
 
 void chucNang5(){
@@ -169,4 +170,23 @@ void sapXepGiamDan(int a[], int n){
         printf("%d\t",a[i]);
     }
     printf("\n");
+}
+
+void maTranBinhPhuong(int row, int col){
+    int a[row][col];
+    //nhap
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("A[%d,%d] = ",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+
+    //xuat
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("%4d\t",a[i][j]*a[i][j]);
+        }
+        printf("\n");
+    }
 }
