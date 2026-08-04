@@ -10,6 +10,8 @@ void chucNang4();
 void chucNang5();
 
 float tinhTrungBinhCong(int a[], int n);
+void timMaxMin(int a[], int n);
+void sapXepGiamDan(int a[], int n);
 void swap(int *a, int *b);
 int main(){
     int chon;
@@ -80,12 +82,28 @@ void chucNang1(){
 
 //2. Kiểm tra Năm nhuận  
 void chucNang2(){
-    
+    int n;
+    int a[10];
+    printf("Nhap n: ");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        printf("Nhap A[%d]= ",i);
+        scanf("%d",&a[i]);
+    }
+    timMaxMin(a,n);
 }
 
 //hoan vi
 void chucNang3(){
-    
+    int n;
+    int a[10];
+    printf("Nhap n: ");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        printf("Nhap A[%d]= ",i);
+        scanf("%d",&a[i]);
+    }
+    sapXepGiamDan(a,n);
 }
 
 void swap(int *a, int *b){
@@ -118,4 +136,37 @@ float tinhTrungBinhCong(int a[], int n){
         return (float)tong/soDem;
     }
         
+}
+
+void timMaxMin(int a[], int n){
+    //4 6 3 8
+    int min,max;
+    min=a[0]; //4
+    max=a[0]; //4
+    for(int i=1;i<n;i++){
+        if(min>a[i]){   //1   4 > 6  
+                        //2.  4 > 3   min = 3
+            min=a[i];
+        }
+        if(max<a[i]){   //1   4 < 6. max = 6
+                        //2   6 < 3
+            max=a[i]; 
+        }
+    }
+    printf("Min = %d\t Max = %d\n",min,max);
+}
+
+void sapXepGiamDan(int a[], int n){
+    //8 6 4 3.   n=4
+    for(int i=0;i<n-1;i++){         //i=3 < 4-1
+        for(int j=i+1;j<n;j++){     //j=3 <4
+            if(a[i] > a[j]){        //a[2] = 3. a[3] = 4
+                swap(&a[i],&a[j]);
+            }
+        }
+    }
+    for(int i=0;i<n;i++){
+        printf("%d\t",a[i]);
+    }
+    printf("\n");
 }
