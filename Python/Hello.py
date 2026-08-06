@@ -1,0 +1,6 @@
+print("Hello, World!")
+print("Chào mừng bạn đến với lớp xưởng thực hành DSA!")
+name = "Python"    # Kiểu chuỗi (str)
+age = 30           # Kiểu số nguyên (int)
+price = 99.5       # Kiểu số thực (float)
+is_active = True   # Kiểu đúng/sai (bool)

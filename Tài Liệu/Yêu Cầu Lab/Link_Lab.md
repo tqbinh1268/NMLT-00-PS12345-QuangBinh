@@ -16,7 +16,7 @@ Lab 5 https://docs.google.com/document/d/1gZP2TjvmWQKrbT71vFfpyXtZPCvWwq3CH7nZeQ
 Lab 6 https://docs.google.com/document/d/1w7FJK70Ova-YuX6JPRVfAW9wjR8klTZkGOspCsUQlOA/edit?usp=sharing
 
 <br>
-Lab 7
+Lab 7 https://docs.google.com/document/d/1TssNYtPcZIAod1krfujUx3-lOBDrHqkh-McZzM2Gis0/edit?usp=sharing
 
 
 <br>
